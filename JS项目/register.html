@@ -1,0 +1,224 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<script language="javascript">
+		function testEmail()
+		{
+			var email =document.form1.txtEmail.value
+			if(email.length==0)
+			{
+					document.getElementById("emildiv").innerHTML ="邮箱不能为空";
+					return false;
+			}
+			else if(email.indexOf("@",0)==-1)
+			{
+				document.getElementById("emildiv").innerHTML ="邮箱格式不正确必须包含@符号！";
+					return false;	
+			}
+			else if(email.indexOf(".",0)==-1)
+			{
+					document.getElementById("emildiv").innerHTML ="邮箱格式不正确必须包含.符号！";
+					return false;
+			}
+			else
+			{
+					document.getElementById("emildiv").innerHTML ="邮箱格式正确请继续填写";
+					open("windowEmail.html","验证窗体","width=300,height=150");
+			}
+		}
+		function testName()
+		{
+				var name = document.form1.txtname.value;
+				var reg = /^[A-Za-z]+$/;
+				if(!reg.test(name.charAt(0)))
+				{
+					document.getElementById("divname").innerHTML ="密码必须以字母开头";
+					return false;	
+				
+				}
+				else if(name.length<6)
+				{
+					document.getElementById("divname").innerHTML ="至少是6位";
+					return false;		
+									
+				}
+				else
+				{
+					document.getElementById("divname").innerHTML ="会员名格式正确请继续填写";
+						
+				}
+				
+		}
+				function testPWD()
+				{
+					var password = document.form1.txtPwd.value;
+					if(password.length<6)
+					{
+						document.all("pwdiv1").innerHTML ="密码至少是6位!!!";
+						return false;
+					
+					}
+					
+				}
+				function testpwd2()
+				{
+						var pwd = document.form1.txtPwd.value;
+						var pwd2 = document.form1.txtpwd2.value;
+						if(pwd2.length==0)
+						{
+								document.all("pwddiv2").innerHTML ="请输入密码!!!";
+								return false;
+						}
+						if(pwd!=pwd2)
+						{
+								document.all("pwddiv2").innerHTML ="两次输入的密码不一致!!!";
+								return false;
+						
+						}
+						else
+						{
+							document.all("pwddiv2").innerHTML ="格式正确";
+						
+						}
+				}
+				
+
+</script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="image/style.css" />
+
+</head>
+
+<body class=".body">
+<table width="800" border="0" align="center">
+  <tr>
+    <td width="547"><!-- InstanceBeginEditable name="EditRegion3" -->
+      <table width="797" height="496" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="321" rowspan="2" align="left"><img src="image/logo.gif" width="143" height="60" /></td>
+          <td width="332" height="33" align="left">&nbsp;</td>
+          <td width="96" align="left">&nbsp;</td>
+          <td width="96" align="left">&nbsp;</td>
+          <td width="159" align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"  >&nbsp;</td>
+          <td width="96" align="center" valign="baseline"><label>
+          <img src="image/menu1-1.gif" width="96" height="31"> </label></td>
+          <td width="96" align="left"><img src="image/menu2-2.gif" width="97" height="31"></td>
+          <td width="159" align="left"><img src="image/menu3-2.gif" width="97" height="31"></td>
+        </tr>
+        <tr>
+          <td colspan="5" class="bottom-bg">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="5" valign="baseline">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="5" valign="baseline">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="5" valign="baseline"><table width="857" height="275" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td colspan="6"><img src="image/register-top.gif" width="857" height="26" /></td>
+              </tr>
+            <tr>
+              <td width="60" rowspan="6" align="left" valign="baseline"><img src="image/register-line.gif" width="3" height="300" /></td>
+              <td align="left" class="register-bold">会员信息：<img src="image/dot_line_1.gif" width="678" height="3" /></td>
+              <td width="37" colspan="2" rowspan="6" align="right"><img src="image/register-line.gif" width="3" height="300" /></td>
+              </tr>
+            <tr>
+              <td align="left">&nbsp;</td>
+              </tr>
+            <tr>
+              <td width="760" align="left"><form id="form1" name="form1" method="post" action="">
+                <table width="712" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="68" align="center"><img src="image/register-arrow.gif" width="9" height="9" /></td>
+                    <td width="62" align="left">E-mail:</td>
+                    <td width="123" align="left"><label>
+                      <input name="txtEmail" type="text" id="txtEmail" size="15" />
+                    </label></td>
+                    <td width="156" align="left"><label>
+                      <input type="button"  name="Submit" class="register-check" onClick="testEmail()" />
+                    </label></td>
+                    <td width="303"><div id="emildiv">请填写常用的电子邮件</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="image/register-arrow.gif" width="9" height="9" /></td>
+                    <td> 会员名:</td>
+                    <td><input name="txtname" type="text" id="txtname" size="15" /></td>
+                    <td><input type="button" name="Submit2" class="register-check" onClick="testName()" /></td>
+                    <td><div id="divname">会员名以字母开头，至少六位</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="middle"><img src="image/register-arrow.gif" width="9" height="9"></td>
+                    <td>密码:</td>
+                    <td><input name="txtPwd" type="password" id="txtPwd" size="15" onBlur="testPWD()" /></td>
+                    <td><div id="pwdiv1">密码设置至少六位</div></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="middle"><img src="image/register-arrow.gif" width="9" height="9"></td>
+                    <td>重复密码:</td>
+                    <td><input name="txtpwd2" type="password" id="txtpwd2" size="15"  onBlur="testpwd2()"/></td>
+                    <td><div id="pwddiv2"></div></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+                            </form>              </td>
+              </tr>
+            
+            <tr>
+              <td>&nbsp;</td>
+              </tr>
+            <tr>
+              <td>&nbsp;</td>
+              </tr>
+            <tr>
+              <td height="49"><img src="image/dot_line_2.gif" width="759" height="3" />
+                <table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><form id="form2" name="form2" method="post" action="">
+                      <label>
+                      <input type="button" name="Submit3" class="register-over" onMouseOut="this.className='register-out'" onMouseOver="this.className='register-over'"/>
+                      </label>
+                                        </form>                    </td>
+                  </tr>
+                </table></td>
+              </tr>
+            <tr>
+              <td colspan="6" valign="baseline"><img src="image/register-bottom.gif" width="857" height="20" /></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+  <tr class="bottom-bg">
+    <td height="26" bordercolor="0">网站导航|网站首页|职位搜索|Myjob|用户注册|用户登陆|简历管理|招聘公司</td>
+  </tr>
+  <tr class="bottom">
+    <td>人才招聘Email:hr@51job.com</td>
+  </tr>
+  <tr class="bottom">
+    <td>个人求职Email：ciub@51job.com或者垂询800-820-5100</td>
+  </tr>
+  <tr class="bottom">
+    <td>未经本招聘网站同意。不得转载本网站之所有招聘信息及作品</td>
+  </tr>
+  <tr class="bottom">
+    <td>无忧工作网版权所有&copy;1999-2007</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="image/bottom1.gif" width="38" height="43" /></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

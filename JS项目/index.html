@@ -1,0 +1,324 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<script language="javascript">
+	function closelayer()
+	{
+		document.getElementById("Layer1").style.display = "none";	
+	}
+		function move()
+		{
+				document.getElementById("Layer1").style.pixelTop = document.body.scrollTop+100;
+				document.getElementById("Layer1").style.pixelLeft = document.body.scrollLeft+10;
+		}
+		window.onscroll = move;
+var x = 50,y = 60;
+var xin = true , yin = false;
+var step = 1;
+var delay = 10;
+ function move3()
+ {
+ 	var L = 0;
+	var T = document.body.scrollTop;
+	var R = document.body.offsetWidth-document.getElementById("Layer2").offsetWidth;
+	var B = document.body.scrollTop+document.body.offsetHeight-document.getElementById("Layer2").offsetHeight;
+	document.getElementById("Layer2").style.left = x;
+	document.getElementById("Layer2").style.top = y;
+	x = x + step*(xin?1:-1);
+	if(x<L)
+	{
+		xin = true;
+		x = L;
+	}
+	if(x>R)
+	{
+		xin = false;
+		x = R;
+	}
+	y = y + step*(yin?1:-1);
+	if(y<T)
+	{
+		yin = true;
+		y = T;
+	}
+	if(y>B)
+	{
+		yin = false;
+		y = B;
+	}
+	setTimeout("move3()",delay);
+ }
+window.onload =move3;
+
+
+</script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FFFF66;
+	font-weight: bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.STYLE2 {color: #FF9933}
+-->
+</style>
+<style type="text/css">
+<!--
+.STYLE3 {
+	color: #FF9900;
+	font-weight: bold;
+}
+-->
+</style>
+
+
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="image/style.css" />
+</head>
+
+<body class=".body">
+<table width="800" border="0" align="center">
+  <tr>
+    <td width="547"><!-- InstanceBeginEditable name="EditRegion3" -->
+      <div id="Layer2" style="position:absolute;left:48px;top:313px;width:80px;height:55px;z-inde;"><img src="image/float.gif" width="80" height="52"></div>
+      <div id="Layer1" style="	position:absolute;left:24px;top:101px;width:105px;heightz-index:1;">
+        <table width="100" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="image/close.jpg" width="109" height="166" /></td>
+          </tr>
+          <tr>
+            <td align="right" bgcolor="#CCCCCC"><a href="#" onClick="closelayer()">关闭</a></td>
+          </tr>
+        </table>
+      </div>
+      <table width="983" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="4" align="left" valign="middle"><img src="image/logo.gif" width="143" height="60" /></td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="15" colspan="4" align="center" valign="middle" style="background-image:url(image/bottom-bg.gif); color:#ffffff;"
+          >个人会员登录|会员名：
+            <label>
+            <input name="textfield" type="text" size="15" />
+          密码
+          <input name="textfield2" type="password" size="15" />
+          <input type="button" name="Submit" class="index-btn" />
+          <input type="checkbox" name="checkbox" value="checkbox" />
+          自动登录  新会员注册</label></td>
+        </tr>
+        <tr>
+          <td height="16" colspan="4" align="left" valign="middle"
+          >&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <td width="195" height="218" align="left"><img src="image/index-2.gif" width="187" height="68" /><img src="image/index-3.gif" width="187" height="68" /><img src="image/index-4.gif" width="187" height="30" /></td>
+          <td width="218" background="image/index-bg1.gif" style="background-repeat:no-repeat"><table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="left"><label>输入关键词:</label></td>
+            </tr>
+            <tr>
+              <td align="left"><input type="text" name="textfield3" /></td>
+            </tr>
+            <tr>
+              <td align="left">例如：软件工程师</td>
+            </tr>
+            <tr>
+              <td height="27" align="left">或 项目经理 互联网</td>
+            </tr>
+            <tr>
+              <td height="27" align="center"><img src="image/search.gif" width="70" height="30" /></td>
+            </tr>
+          </table></td>
+          <td width="361" align="center"><p>欢迎光临招聘网<img src="image/index-6.gif" width="350" height="155" /></p>
+          <p><strong>。</strong>深圳高新技术人才招聘会<strong>。</strong>近期预告敬请关注</p></td>
+          <td width="200" align="left" valign="middle"><table width="200" border="1" align="center" cellpadding="0" cellspacing="0"> 
+            <tr>
+              <td background="image/bottom-bg.gif">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="153" bordercolor="#FF9900"><table width="200" border="0" cellspacing="0" cellpadding="0"> 
+                <tr>
+                  <td><marquee width="100" height="50" direction="up" onMouseMove="this.stop()" onMouseOut="this.start()" scrollamount="2">你倒是向上跑啊! <p>快点向上跑吧！</p>
+                    <p>抓紧向上啊！</p>
+                    <p>晚了来不及了！</p></marquee></td>
+                </tr>
+                
+            </table></td>
+            </tr>
+          </table>            <p>&nbsp;</p>          </td>
+        </tr>
+        
+        
+        <tr>
+          <td colspan="4"><img src="image/index-1.gif" width="800" height="26" /></td>
+        </tr>
+        <tr>
+          <td colspan="4"><marquee width="980" height="30" direction="left" onMouseMove="this.stop()" onMouseOut="this.start()" scrollamount="6"> 测试文字看看动不动！！！！！！！！！！！！！！！！！！！！！！！！！！！</marquee></td>
+        </tr>
+        <tr>
+          <td colspan="4" align="left"><table width="200" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td rowspan="2"><img src="image/index-ad1.gif" width="317" height="127" /></td>
+              <td><img src="image/index-ad2.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad4.gif" width="317" height="60" /></td>
+            </tr>
+            <tr>
+              <td><img src="image/index-ad6.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad5.gif" width="317" height="60" /></td>
+            </tr>
+            <tr>
+              <td><img src="image/index-ad7.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad9.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad11.gif" width="317" height="60" /></td>
+            </tr>
+            <tr>
+              <td><img src="image/index-ad8.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad10.gif" width="317" height="60" /></td>
+              <td><img src="image/index-ad12.gif" width="317" height="60" /></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center"><table width="200" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td colspan="6" align="center"><img src="image/hot_top.gif" width="962" height="25" /></td>
+              </tr>
+            <tr>
+              <td width="3" rowspan="13"><img src="image/register-line.gif" width="3" height="300" /></td>
+              <td><label>
+                <input name="Submit2" type="button" value="计算机/网路/通讯/电子" class="index-btn2" />
+              </label></td>
+              <td><label>
+                <input name="Submit3" type="button" value="旅游/购物/消费/游玩" class="index-btn2" />
+              </label></td>
+              <td width="441" colspan="2">&nbsp;</td>
+              <td width="3" rowspan="13"><img src="image/register-line.gif" width="3" height="300" /></td>
+            </tr>
+            <tr>
+              <td width="238"><img src="image/register-arrow.gif" width="9" height="9" /><span class="STYLE1 STYLE2">计算机/网路/通讯/电子</span></td>
+              <td width="278">&nbsp;</td>
+              <td width="441" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="left"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="278" align="left"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="220" align="left"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="221" align="left"><strong>。</strong>北大青鸟阿博泰克公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="278"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="220"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="221"><strong>。</strong>北大青鸟阿博泰克公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="278"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="220"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="221"><strong>。</strong>北大青鸟阿博泰克公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="278"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="220"><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td width="221"><strong>。</strong>北大青鸟阿博泰克公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+              <td><strong>。</strong>北大青鸟阿博泰克公司</td>
+            </tr>
+            <tr>
+              <td><img src="image/register-arrow.gif" width="9" height="9" /><span class="STYLE3">旅游/购物/消费/游玩</span></td>
+              <td>&nbsp;</td>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="left"><strong>。</strong>ACCP济南师创总公司</td>
+              <td align="left"><strong>。</strong>ACCP济南师创总公司</td>
+              <td align="left"><strong>。</strong>ACCP济南师创总公司</td>
+              <td align="left"><strong>。</strong>ACCP济南师创总公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+            </tr>
+            <tr>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+              <td><strong>。</strong>ACCP济南师创总公司</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="6"><img src="image/hot_down.gif" width="962" height="16" /></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+  <tr class="bottom-bg">
+    <td height="26" bordercolor="0">网站导航|网站首页|职位搜索|Myjob|用户注册|用户登陆|简历管理|招聘公司</td>
+  </tr>
+  <tr class="bottom">
+    <td>人才招聘Email:hr@51job.com</td>
+  </tr>
+  <tr class="bottom">
+    <td>个人求职Email：ciub@51job.com或者垂询800-820-5100</td>
+  </tr>
+  <tr class="bottom">
+    <td>未经本招聘网站同意。不得转载本网站之所有招聘信息及作品</td>
+  </tr>
+  <tr class="bottom">
+    <td>无忧工作网版权所有&copy;1999-2007</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="image/bottom1.gif" width="38" height="43" /></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

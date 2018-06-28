@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<script language="javascript">
+		function changecity()
+		{
+				var city = new Array();
+				city['山东']=['济南','青岛','菏泽','莱芜'];
+				city['四川']=['成都','绵阳','汶川','都江堰'];
+			var	index =document.form1.selectCity.value;
+			document.form1.selectCity2.length=0;
+			for(var i  in city[index])
+			{
+					document.form1.selectCity2.add(new Option(city[index][i],city[index][i]));
+			}		
+		}
+		
+	function test()
+	{
+			
+			var name = document.form1.txtname.value;
+			if(name=="")
+			{
+					alert("用户名必须输入！");
+					document.form1.txtname.focus();
+					return false;
+			}
+			
+			if(document.form1.radiobutton[0].checked==false&&document.form1.radiobutton[1].checked			                ==false)
+			{
+					alert("必须选择性别！");
+					return false;
+			}
+			
+			if(document.form1.selectYear.selectedIndex==0||document.form1.selectMonth.selectedIndex               ==0||document.form1.selectDay.selectedIndex==0)
+			{
+					alert("必须选择年/月/日");
+					return false;
+			}
+			
+			if(document.form1.selectWorkyear.selectedIndex==0)
+			{
+					alert("必须选择工作年限");
+					return false;
+			}
+			
+				if(document.form1.selectType.selectedIndex==0)
+			{
+					alert("必须选择证件类型");
+					return false;
+			}
+			
+			var number = document.form1.txtType.value;
+			if(number=="")
+			{
+					alert("证件号必须输入！");
+					document.form1.txtType.focus();
+					return false;
+			}
+			
+					if(document.form1.selectCity.selectedIndex==0||document.form1.selectCity.            selectCity2==0)
+			{
+					alert("现居住地必须选择完全");
+					return false;
+			}
+			
+			if(document.form1.txtPhone.value=="")
+			{
+					alert("联系方式必须输入！");
+					document.form1.txtPhone.focus();
+					return false;
+			}
+			
+			var email =document.form1.txtEmail.value
+			if(email.length==0)
+			{
+					alert("邮箱不能为空");
+					return false;
+			}
+			else if(email.indexOf("@",0)==-1)
+			{
+				alert("邮箱格式不正确必须包含@符号");
+					return false;	
+			}
+			else if(email.indexOf(".",0)==-1)
+			{
+					alert("邮箱格式不正确必须包含.符号");
+					return false;
+			}
+			
+			if(document.form1.txtedu.value=="")
+			{
+					alert("教育经历必须输入！");
+					document.form1.txtedu.focus();
+					return false;
+			}
+				
+			if(document.form1.txtwork.value=="")
+			{
+					alert("求职意向必须输入！");
+					document.form1.txtwork.focus();
+					return false;
+			}
+			else
+			{
+						document.form1.submit();
+			}
+	}
+
+</script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="image/style.css" />
+
+</head>
+
+<body class=".body">
+<table width="800" border="0" align="center">
+  <tr>
+    <td width="547"><!-- InstanceBeginEditable name="EditRegion3" -->
+      <table width="800" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="73" colspan="6" align="left" valign="middle"><img src="image/logo.gif" width="143" height="60" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td width="539">&nbsp;</td>
+          <td width="97" valign="bottom"><img src="image/menu1-2.gif" width="97" height="31" /></td>
+          <td width="96" valign="bottom"><img src="image/menu2-2.gif" width="96" height="31" /></td>
+          <td width="97" height="31" valign="bottom">
+          <label><img src="image/menu3-1.gif" width="97" height="31" /></label></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bottom-bg"></td>
+        </tr>
+        <tr>
+          <td width="190" align="center" valign="top"><table width="200" border="0" cellspacing="0" cellpadding="0" class="intro-left">
+            <tr>
+              <td colspan="2"><img src="image/intro-left1.gif" width="189" height="32" /></td>
+            </tr>
+            <tr align="left">
+              <td width="36" align="right" valign="middle"><img src="image/register-arrow.gif" width="9" height="9" class="intro-l2" /></td>
+              <td width="154" align="left" valign="middle"><strong>我的简历</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2"><img src="image/intro-left2.gif" width="189" height="32" /></td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">基本个人信息</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">工作经验</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">教育经历</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">培训经历</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">语言能力</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">求职意向/自我评价</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">附加信息</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">证书</td>
+            </tr>
+            <tr>
+              <td colspan="2"><img src="image/intro-left3.gif" width="189" height="32" /></td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">高级人才附加信息</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">IT技能</td>
+            </tr>
+            <tr>
+              <td align="right"><img src="image/intro-1.gif" width="18" height="16" /></td>
+              <td align="left">项目经验</td>
+            </tr>
+          </table></td>
+          <td width="6">&nbsp;</td>
+          <td colspan="4" align="left" valign="top" class="ntro-td"><form id="form1" name="form1" method="post" action="" class="intro-right">
+            <table width="457" border="0" align="left" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="5">&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="5"><strong><img src="image/register-arrow.gif" width="9" height="9" />基本个人信息（<span class="font_error">*</span>为必填项）</strong></td>
+              </tr>
+              <tr>
+                <td colspan="5"><img src="image/dot_line_1.gif" width="678" height="3" /></td>
+              </tr>
+              <tr>
+                <td width="89" height="27" align="center"><strong><span class="font_error">*</span></strong>姓名 </td>
+                <td width="366"><input name="txtname" type="text" id="txtname" size="15" /></td>
+                <td width="78">&nbsp;</td>
+                <td width="68" align="center"><strong><span class="font_error">*</span></strong>性别</td>
+                <td width="198" align="left"><input type="radio" name="radiobutton" value="radiobutton" />
+男
+  <input type="radio" name="radiobutton" value="radiobutton" />
+女</td>
+              </tr>
+              <tr>
+                <td height="30" align="center"><label></label>                  <label></label>                  <strong><span class="font_error">*</span></strong>出生日期
+                  <label></label></td>
+                <td align="left"><select name="selectYear" id="selectYear">
+                  <option>--请选择--</option>
+                  <option value="1975">1975</option>
+                  <option value="1976">1976</option>
+                  <option value="1977">1977</option>
+                </select>
+年
+<select name="selectMonth" id="selectMonth">
+  <option>--请选择--</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+月
+<select name="selectDay" id="selectDay">
+  <option>--请选择--</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+日 </td>
+                <td align="center">&nbsp;</td>
+                <td align="center"><strong><span class="font_error">*</span></strong>工作年限</td>
+                <td align="left"><label>
+                  <select name="selectWorkyear" id="selectWorkyear">
+                    <option>--请选择--</option>
+                    <option value="1">1年</option>
+                    <option value="2">2年</option>
+                    <option value="10">3-10年</option>
+                  </select>
+                </label></td>
+              </tr>
+              
+              <tr>
+                <td height="34" align="center">国家或地区</td>
+                <td><select name="select5">
+                  <option>中国大陆</option>
+                                                </select></td>
+                <td>&nbsp;</td>
+                <td align="center">户口</td>
+                <td align="left"><select name="select6">
+                  <option>--请选择--</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td height="33" align="center"><strong><span class="font_error">*</span></strong>证件类型</td>
+                <td><select name="selectType" id="selectType">
+                  <option>--请选择--</option>
+                  <option>--身份证--</option>
+                  <option>--结婚证--</option>
+                                                </select></td>
+                <td>&nbsp;</td>
+                <td align="center"><strong><span class="font_error">*</span></strong>证件号</td>
+                <td align="left"><label>
+                  <input name="txtType" type="text" id="txtType" size="15" />
+                </label></td>
+              </tr>
+              <tr>
+                <td height="36" align="center">目前年薪</td>
+                <td><select name="select8">
+                  <option>--请输入--</option>
+                                </select>
+                  /年</td>
+                <td>&nbsp;</td>
+                <td align="center">币种</td>
+                <td align="left"><select name="select9">
+                  <option>--人民币--</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td height="37" align="center"><strong><span class="font_error">*</span></strong>现居住地</td>
+                <td colspan="2"><select name="selectCity" id="selectCity" onchange="changecity()">
+                  <option>--请选择省份--</option>
+                  <option value="山东">山东</option>
+                  <option value="四川">四川</option>
+                                </select>
+                  <select name="selectCity2" id="selectCity2">
+                    <option>--请选择城市--</option>
+                    </select></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="29" align="center"><strong><span class="font_error">*</span></strong>联系方式</td>
+                <td><input name="txtPhone" type="text" id="txtPhone" size="15" /></td>
+                <td>&nbsp;</td>
+                <td align="center"><strong><span class="font_error">*</span></strong>Email</td>
+                <td align="left"><input name="txtEmail" type="text" id="txtEmail" size="15" /></td>
+              </tr>
+              <tr>
+                <td height="30" align="center">地址</td>
+                <td><label>
+                  <input type="text" name="textfield4" />
+                </label></td>
+                <td>&nbsp;</td>
+                <td align="center">邮编</td>
+                <td align="left"><input name="textfield322" type="text" size="5" /></td>
+              </tr>
+              <tr>
+                <td align="center">个人主页</td>
+                <td><input type="text" name="textfield42" /></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="5"><img src="image/register-arrow.gif" width="9" height="9" /><strong>我的简历</strong></td>
+              </tr>
+              <tr>
+                <td height="11" colspan="5"><img src="image/dot_line_1.gif" width="678" height="3" /></td>
+              </tr>
+              <tr>
+                <td height="39" align="center">工作经验</td>
+                <td colspan="2"><label>
+                  <textarea name="textarea" cols="50"></textarea>
+                </label></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="35" align="center"><strong><span class="font_error">*</span></strong>教育经历</td>
+                <td colspan="2"><textarea name="txtedu" cols="50" id="txtedu"></textarea></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="35" align="center">培训经历</td>
+                <td colspan="2"><textarea name="textarea3" cols="50"></textarea></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center"><strong><span class="font_error">*</span></strong>求职意向                  </td>
+                <td align="center"><textarea name="txtwork" cols="50" id="txtwork"></textarea></td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+              </tr>
+              
+              <tr>
+                <td colspan="5"><img src="image/register-arrow.gif" width="9" height="9" /><strong>人才附加信息</strong></td>
+              </tr>
+              <tr>
+                <td height="14" colspan="5"><img src="image/dot_line_1.gif" width="678" height="3" /></td>
+              </tr>
+              <tr>
+                <td height="35" align="center">附加信息</td>
+                <td><textarea name="textarea5" cols="50"></textarea></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="34" align="center">IT技能</td>
+                <td><textarea name="textarea6" cols="50"></textarea></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="33" align="center">项目经验</td>
+                <td><textarea name="textarea7" cols="50"></textarea></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="7" colspan="5"><img src="image/dot_line_2.gif" width="759" height="3" /></td>
+              </tr>
+              <tr>
+                <td><label></label></td>
+                <td align="center"><input type="button" name="Submit" value="保存" class="login-out" onmouseover="this.className='login-over'" onmouseout="this.className='login-out'" onclick="test()" /></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+          </form>          </td>
+        </tr>
+      </table>
+    <!-- InstanceEndEditable --></td>
+  </tr>
+  <tr class="bottom-bg">
+    <td height="26" bordercolor="0">网站导航|网站首页|职位搜索|Myjob|用户注册|用户登陆|简历管理|招聘公司</td>
+  </tr>
+  <tr class="bottom">
+    <td>人才招聘Email:hr@51job.com</td>
+  </tr>
+  <tr class="bottom">
+    <td>个人求职Email：ciub@51job.com或者垂询800-820-5100</td>
+  </tr>
+  <tr class="bottom">
+    <td>未经本招聘网站同意。不得转载本网站之所有招聘信息及作品</td>
+  </tr>
+  <tr class="bottom">
+    <td>无忧工作网版权所有&copy;1999-2007</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="image/bottom1.gif" width="38" height="43" /></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>
